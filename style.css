@@ -39,6 +39,7 @@ header {
   padding: 23px 13%;
   background-color: transparent;
   transition: var(--transition);
+  /* background-color: var(--bg-color); */
 }
 .logo img {
   width: 160px;
@@ -81,4 +82,98 @@ header {
   cursor: pointer;
   z-index: 1001;
   display: none;
+}
+section {
+  padding: 80px 13px;
+}
+.home {
+  background-color: var(--bg-color);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.home-text {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.home-text p {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.home-text h1 {
+  font-size: var(--big-font);
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+form div {
+  margin: 0 10px;
+}
+form div label {
+  font-weight: 700;
+  color: #333;
+}
+form select,
+form input[type="number"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+}
+form button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #303b72;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+form button:hover {
+  background: var(--on-hover);
+  transform: scale(1.05);
+}
+.home-img {
+  margin-top: 25px;
+}
+.home-img img {
+  max-width: 100%;
+}
+.container {
+  padding: 70px 13px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+.container h2 {
+  color: red;
+  font-size: 2em;
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 20px;
 }

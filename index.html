@@ -31,7 +31,73 @@
     </header>
 
     <!-- home screen  -->
-     <section class="home" id="home"></section>
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="home-text">
+          <p>Find your cars for sealand for rent near you</p>
+          <h1>find your dream cars</h1>
+        </div>
+        <form action="" id="carSearchForm">
+          <div>
+            <label for="make">Make:</label>
+            <select name="" id="make" onchange="showYears()">
+              <option value="" disabled selected>Select Make</option>
+            </select>
+          </div>
+          <div id="years" class="hidden">
+            <label for="year">Year of manufacture</label>
+            <select id="year"></select>
+          </div>
+
+          <div>
+            <label for="budget">Budget In $</label>
+            <input type="number" id="budget" placeholder="Enter your budget" />
+          </div>
+          <button type="button" onclick="searchCars()">Search</button>
+        </form>
+        <div class="home-img">
+          <img src="Images/home1.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Browse by type</h2>
+
+      <div class="container-box">
+        <div class="container-img">
+          <img src="Images/SUV.png" alt="" width="70px" />
+        </div>
+        <div class="container-text">
+          <p>Suv</p>
+        </div>
+      </div>
+      <div class="container-box">
+        <div class="container-img">
+          <img src="Images/sedan.png" alt="" width="70px" />
+        </div>
+        <div class="container-text">
+          <p>Sedan</p>
+        </div>
+      </div>
+      <div class="container-box">
+        <div class="container-img">
+          <img src="Images/Coupe.png" alt="" width="70px" />
+        </div>
+        <div class="container-text">
+          <p>COupe</p>
+        </div>
+      </div>
+      <div class="container-box">
+        <div class="container-img">
+          <img src="Images/Convertible.png" alt="" width="70px" />
+        </div>
+        <div class="container-text">
+          <p>Convertible</p>
+        </div>
+      </div>
+    </section>
+    <script src="options.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
