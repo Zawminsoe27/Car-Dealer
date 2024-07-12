@@ -83,6 +83,11 @@ header {
   z-index: 1001;
   display: none;
 }
+header.sticky {
+  background-color: var(--bg-color);
+  padding: 12px 13%;
+  box-shadow:0 2px 4px rgba(0,0,0,0.05)  ;
+}
 section {
   padding: 80px 13px;
 }
@@ -114,7 +119,8 @@ section {
   font-weight: 500;
   margin-bottom: 5px;
 }
-.home-text h1 {
+.hompxe-text h1 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-size: var(--big-font);
 }
 form {
@@ -176,4 +182,18 @@ form button:hover {
   grid-column: 1/-1;
   text-align: center;
   margin-bottom: 20px;
+}
+.container-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  bottom: 1px solid #dce4ee;
+  border-radius: 20px;
+  padding: 20px 30px;
+  transition: var(--transition);
+}
+
+.container-box:hover {
+  background-color: var(--second-color);
+  transform: translateY(-10px);
 }
