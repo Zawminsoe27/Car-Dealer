@@ -1,103 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="Framework/Bootstrap/bootstrap-icons/font/bootstrap-icons.min.css"
-    />
-    <title>Car Dealer</title>
-  </head>
-  <body>
-    <!-- main menu  -->
-    <header>
-      <a href="#" class="logo">
-        <img src="Images/logo.png" alt="" />
-      </a>
-      <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#Categories">Categories</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-      <div class="header-icons">
-        <a href="#"><i class="bi bi-person"></i></a>
-        <a href="#"><i class="bi bi-cart"></i></a>
-        <a class="bi bi-list" id="menu-icon"></a>
-      </div>
-    </header>
 
-    <!-- home screen  -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <div class="home-text">
-          <p>Find your cars for sealand for rent near you</p>
-          <h1>find your dream cars</h1>
-        </div>
-        <form action="" id="carSearchForm">
-          <div>
-            <label for="make">Make:</label>
-            <select name="" id="make" onchange="showYears()">
-              <option value="" disabled selected>Select Make</option>
-            </select>
-          </div>
-          <div id="years" class="hidden">
-            <label for="year">Year of manufacture</label>
-            <select id="year"></select>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Framework/Bootstrap/bootstrap-icons/font/bootstrap-icons.min.css" />
+  <title>Car Dealer</title>
+</head>
 
-          <div>
-            <label for="budget">Budget In $</label>
-            <input type="number" id="budget" placeholder="Enter your budget" />
-          </div>
-          <button type="button" onclick="searchCars()">Search</button>
-        </form>
-        <div class="home-img">
-          <img src="Images/home1.png" alt="" />
-        </div>
-      </div>
-    </section>
+<body>
+  <!-- main menu  -->
+  <header>
+    <a href="#" class="logo">
+      <img src="Images/logo.png" alt="" />
+    </a>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="header-icons">
+      <a href="#"><i class="bi bi-person"></i></a>
+      <a href="#"><i class="bi bi-cart"></i></a>
+      <a class="bi bi-list" id="menu-icon"></a>
+    </div>
+  </header>
 
-    <section class="container">
-      <h2>Browse by type</h2>
+  <!-- home screen  -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="home-text">
+        <p>Find your cars for sealand for rent near you</p>
+        <h1>find your dream cars</h1>
+      </div>
+      <form action="" id="carSearchForm">
+        <div>
+          <label for="make">Make:</label>
+          <select name="" id="make" onchange="showYears()">
+            <option value="" disabled selected>Select Make</option>
+          </select>
+        </div>
+        <div id="years" class="hidden">
+          <label for="year">Year of manufacture</label>
+          <select id="year"></select>
+        </div>
 
-      <div class="container-box">
-        <div class="container-img">
-          <img src="Images/SUV.png" alt="" width="70px" />
+        <div>
+          <label for="budget">Budget In $</label>
+          <input type="number" id="budget" placeholder="Enter your budget" />
         </div>
-        <div class="container-text">
-          <p>Suv</p>
+        <button type="button" onclick="searchCars()">Search</button>
+      </form>
+      <div class="home-img">
+        <img src="Images/home1.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Browse by type</h2>
+
+    <div class="container-box">
+      <div class="container-img">
+        <img src="Images/SUV.png" alt="" width="70px" />
+      </div>
+      <div class="container-text">
+        <p>Suv</p>
+      </div>
+    </div>
+    <div class="container-box">
+      <div class="container-img">
+        <img src="Images/sedan.png" alt="" width="70px" />
+      </div>
+      <div class="container-text">
+        <p>Sedan</p>
+      </div>
+    </div>
+    <div class="container-box">
+      <div class="container-img">
+        <img src="Images/Coupe.png" alt="" width="70px" />
+      </div>
+      <div class="container-text">
+        <p>COupe</p>
+      </div>
+    </div>
+    <div class="container-box">
+      <div class="container-img">
+        <img src="Images/Convertible.png" alt="" width="70px" />
+      </div>
+      <div class="container-text">
+        <p>Convertible</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- most sold car section  -->
+  <section class="categories" id="categories">
+    <div class="center-text">
+      <h5>Popular Cars</h5>
+      <h2>Most sold cars</h2>
+      <div class="categories-content">
+        <div class="box">
+          <img src="Images/toyota.png" alt="" width="100px" />
+          <h3>TOYOTA</h3>
+          <p>12.5 sales</p>
+        </div>
+
+
+        <div class="box">
+          <img src="Images/VW.png" alt="" width="100px" />
+          <h3>VW</h3>
+          <p>12.5 sales</p>
+        </div>
+
+        <div class="box">
+          <img src="Images/mercedes.png" alt="" width="100px" />
+          <h3>MERCEDES BENZ</h3>
+          <p>12.5 sales</p>
+        </div>
+
+        <div class="box">
+          <img src="Images/Honda.png" alt="" width="100px" />
+          <h3>HONDA</h3>
+          <p>12.5 sales</p>
         </div>
       </div>
-      <div class="container-box">
-        <div class="container-img">
-          <img src="Images/sedan.png" alt="" width="70px" />
-        </div>
-        <div class="container-text">
-          <p>Sedan</p>
+      <div class="main-btn">
+        <a href="#" class="btn">Browse All Cars</a>
+      </div>
+  </section>
+  <!-- end most sold car section  -->
+  <section class="shop" id="shop">
+    <div class="center-text">
+      <h5>Shop</h5>
+      <h2>Latest Cars</h2>
+    </div>
+
+    <div class="shop-content">
+      <div class="row">
+        <img src="Images/car1.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>Toyota Camry</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
         </div>
       </div>
-      <div class="container-box">
-        <div class="container-img">
-          <img src="Images/Coupe.png" alt="" width="70px" />
-        </div>
-        <div class="container-text">
-          <p>COupe</p>
-        </div>
-      </div>
-      <div class="container-box">
-        <div class="container-img">
-          <img src="Images/Convertible.png" alt="" width="70px" />
-        </div>
-        <div class="container-text">
-          <p>Convertible</p>
+
+      <div class="row">
+        <img src="Images/car6.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>Toyota Camry</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
         </div>
       </div>
-    </section>
-    <script src="options.js"></script>
-    <script src="app.js"></script>
-  </body>
+
+      <div class="row">
+        <img src="Images/car2.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>T-Cross 2023</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="Images/car3.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>Audi A6</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="Images/car4.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>Corolls Altis</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="Images/car5.jpg" alt="">
+        <div class="shop-text">
+          <h5>$40,000</h5>
+          <h3>Ranger</h3>
+          <p>3.5 d5 Towerplus momentum 5dr aws beartric</p>
+          <a href="" class="view-details-link">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-btn">
+      <a href="" class="btn">View All Cars</a>
+    </div>
+  </section>
+  <!-- latest cars  -->
+
+  <!-- end latest cars  -->
+  <script src="options.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>
